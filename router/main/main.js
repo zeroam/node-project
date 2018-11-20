@@ -5,7 +5,10 @@ var path = require('path');
 
 // 라우터 된 경로
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/main.html'));
+  console.log('main is loaded', req.user);
+  var id = req.user;
+  res.render('main.ejs', {'id':id});
+  //res.sendFile(path.join(__dirname, '../../public/main.html'));
 });
 
 module.exports = router;
