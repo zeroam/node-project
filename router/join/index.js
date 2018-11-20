@@ -5,11 +5,11 @@ var mysql = require('mysql');
 
 // DB 접속 정보
 var connection = mysql.createConnection({
-  host: 'zeroam.iptime.org',
+  host: 'localhost',
   port: 3306,
-  user: 'jcw',
-  password: '1234',
-  database: 'jboard2'
+  user: 'root',
+  password: 'asdf1234',
+  database: 'jsman'
 });
 
 connection.connect();
