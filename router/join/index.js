@@ -24,7 +24,7 @@ router.post("/", function(req, res) {
   var name = body.name;
   var passwd = body.password
 
-  var sql = {email:email, name:name, password:passwd}
+  var sql = {email:email, name:name, pw:passwd}
   var query = connection.query(`insert into user set ?`, sql, (err, rows) => {
     if(err) throw err;
     else res.render('welcome.ejs', {name:name, id:rows.insertId});
